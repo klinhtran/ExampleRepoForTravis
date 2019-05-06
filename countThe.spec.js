@@ -24,4 +24,8 @@ describe('countThe', () => {
   it('should not count it when "the" is embedded at the end of another word', () => {
     expect(countThe('bathe the dog')).toBe(1);
   });
+
+  it('should throw an error when given null', () => {
+    expect(() => countThe(null)).toThrow();
+  });
 });
